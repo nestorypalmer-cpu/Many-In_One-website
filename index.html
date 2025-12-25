@@ -1,86 +1,174 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WELCOME - HOMEPAGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
   <style>
-    body {
-      background-color: #f0f4f8;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      margin: 0;
-      padding: 20px;
+    /* --- General Reset & Styles --- */
+    * {
+      box-sizing: border-box;
     }
 
-    h1 {
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Poppins', sans-serif; /* Modern Font */
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* --- Header Section --- */
+    header {
+      background: linear-gradient(135deg, #0044cc, #0066ff);
+      color: white;
+      padding: 40px 20px;
       text-align: center;
-      color: #0044cc;
       margin-bottom: 40px;
     }
 
-    .category {
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    header p {
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    /* --- Layout Container --- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      
+      /* This creates the responsive grid layout */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    /* --- Card Styling --- */
+    .category-card {
       background-color: #fff;
-      border-left: 5px solid #0044cc;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 4px solid #0044cc;
     }
 
-    .category b {
-      font-size: 20px;
-      text-decoration: underline;
+    /* Hover effect to make it interactive */
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .category-card h2 {
       color: #0044cc;
+      margin-top: 0;
+      font-size: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
     }
 
-    .category a {
-      color: #0066cc;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .category a:hover {
-      text-decoration: underline;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-weight: bold;
+    .category-card p {
       color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    /* --- Button Styling --- */
+    .btn {
+      display: inline-block;
+      background-color: #0044cc;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #003399;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #e1e7ed;
+      color: #555;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <h1>WELCOME TO MY HOMEPAGE GET MANY UPDATES YOU WANT </h1>
+  <header>
+    <h1>WELCOME TO MY HOMEPAGE</h1>
+    <p>Your hub for Sports, Music, and Entertainment</p>
+  </header>
 
-  <div class="category">
-    <p><b>FOOTBALL</b></p>
-    <p>In this category you'll get football memes, betting tips, and more. Just click here:
-<a href="football.html">FOOTBALL.COM</a></p>
-  </div>
+  <main class="container">
 
+    <div class="category-card">
+      <div>
+        <h2>FOOTBALL</h2>
+        <p>In this category you'll get football memes, betting tips, and more.</p>
+      </div>
+      <a href="football.html" class="btn">VISIT FOOTBALL.COM</a>
+    </div>
 
+    <div class="category-card">
+      <div>
+        <h2>BETTING TIPS</h2>
+        <p>Get sure betting tips and daily odds.</p>
+      </div>
+      <a href="bettips.html" class="btn">VISIT BETIPS.COM</a>
+    </div>
 
-  <div class="category">
-    <p><b>MUSICTZ</b></p>
-    <p>Get the latest Tanzanian music,Chart,lyrics, gossip & more. Click here: 
-    <a href="MusicTZhome.html">MUSICTZ.COM</a></p>
-  </div>
+    <div class="category-card">
+      <div>
+        <h2>MUSIC TZ</h2>
+        <p>Get the latest Tanzanian music, charts, lyrics, gossip & more.</p>
+      </div>
+      <a href="MusicTZhome.html" class="btn">VISIT MUSICTZ.COM</a>
+    </div>
 
-  <div class="category">
-    <p><b>WWENEWS</b></p>
-    <p>WWE news, match recaps, superstar updates & more. Click here: 
-    <a href="WWE.html">WWENEWS.COM</a></p>
-  </div>
+    <div class="category-card">
+      <div>
+        <h2>WWE NEWS</h2>
+        <p>WWE news, match recaps, superstar updates & more.</p>
+      </div>
+      <a href="WWE.HTML" class="btn">VISIT WWENEWS.COM</a>
+    </div>
 
-  
+    <div class="category-card">
+      <div>
+        <h2>INTERNATIONAL</h2>
+        <p>International news, global updates, and world events.</p>
+      </div>
+      <a href="international.HTML" class="btn">VISIT INTERNATIONAL</a>
+    </div>
 
-  
+  </main>
 
-  <p class="footer">CREATED BY DAMIONE WELCOME AND THANK YOU</p>
+  <footer>
+    THANK YOU AND WELCOME
+  </footer>
 
 </body>
 </html>
-
